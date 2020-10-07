@@ -142,3 +142,5 @@ _"I know this may not be the best solution for this issue so I'd like to see oth
 ### **Finally**
 
 ## **WE ARE DONE!!!** 🥳🥳🥳
+
+Source code available at [codepen.io](https://codepen.io/gameshaker/pen/jOrNqRj) and [github](https://github.com/Dchole/custom-upload-btn-2.git)
