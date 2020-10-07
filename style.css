@@ -22,9 +22,10 @@ section {
   width: inherit;
   border: 3px solid lightblue;
   border-radius: 50%;
+  transition: ease-out 200ms;
 }
 
-input {
+#upload {
   display: none;
 }
 
