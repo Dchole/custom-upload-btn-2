@@ -1,19 +1,17 @@
-const AVATAR = document.querySelector("#user-avatar");
-const INPUT = document.querySelector("#upload");
-const BTN = document.querySelector('span[role="button"]');
+const UPLOAD_BUTTON = document.getElementById("upload-button");
+const FILE_INPUT = document.querySelector("input[type=file]");
+const AVATAR = document.getElementById("avatar");
 
-const handleUpload = event => {
+UPLOAD_BUTTON.addEventListener("click", () => FILE_INPUT.click());
+
+FILE_INPUT.addEventListener("change", event => {
   const file = event.target.files[0];
+
   const reader = new FileReader();
-
   reader.readAsDataURL(file);
-  reader.onloadend = () => {
-    const imageBuffer = reader.result;
-    AVATAR.style.background = `url(${imageBuffer}) center center/cover`;
-  };
-};
 
-INPUT.addEventListener("change", handleUpload);
-BTN.addEventListener("keypress", event => {
-  if (event.key === " " || event.key === "Enter") BTN.click();
+  reader.onloadend = () => {
+    AVATAR.setAttribute("aria-label", file.name);
+    AVATAR.style.background = `url(${reader.result}) center center/cover`;
+  };
 });

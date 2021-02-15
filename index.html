@@ -8,14 +8,18 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <section>
-      <div id="user-avatar" aria-label="user avatar"></div>
-      <input type="file" name="upload" id="upload" accept="image/*" />
-      <label for="upload">
-        <span role="button" tabindex="0" aria-label="upload user profile">
-          👾
-        </span>
-      </label>
-    </section>
+    <main>
+      <input type="file" name="image" id="image" accept="image/*" />
+      <div id="preview">
+        <div id="avatar"></div>
+        <button
+          id="upload-button"
+          aria-labelledby="image"
+          aria-describedby="image"
+        >
+          🙂
+        </button>
+      </div>
+    </main>
   </body>
 </html>
